@@ -1,4 +1,20 @@
-with open(myFasta.txt) as data:
+def readFastaEntry( fp ):
+    string = ""
+    while True:
+        line = string or f.readline()
+        if not line:
+            break
+        seq = []
+        while True:
+            string = f.readline()
+            if not string or string.startswith(">"):
+                break
+            else:
+                seq.append(string)
+        yield (line, "".join(seq))
+
+
+with readFastaEntry() as data:
     for line in data:
         if '>' in line:
             continue
