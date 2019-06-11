@@ -1,25 +1,11 @@
-def readFastaEntry( fp ):
-    string = ""
-    while True:
-        line = string or f.readline()
-        if not line:
-            break
-        seq = []
-        while True:
-            string = f.readline()
-            if not string or string.startswith(">"):
-                break
-            else:
-                seq.append(string)
-        yield (line, "".join(seq))
+from Bio import SeqIO
+
+records = list(SeqIO.parse("firstSample.fasta", "fasta"))
+print(records[0].id)  # first record
+print(records[-1].id)  # last record
 
 
-with readFastaEntry() as data:
-    for line in data:
-        if '>' in line:
-            continue
-        myDNAstring += line.strip()
-
+myDNAstring = ""
 def gc_count(s):
     num_gc = 0
     for char in s:
