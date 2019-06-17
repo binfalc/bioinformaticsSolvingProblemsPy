@@ -1,18 +1,21 @@
 from Bio import SeqIO
 
-records = list(SeqIO.parse("firstSample.fasta", "fasta"))
-print(records[0].id)  # first record
-print(records[-1].id)  # last record
+GC = 0
 
+records = open("firstSample1.fasta", "r")
+for record in SeqIO.parse(records, 'fasta'):
+    count = 0
+    totalcount = 0
+    for nt in record.seq:
+        totalcount = totalcount + 1
+        if nt in "gcGC":
+            count = count + 1
+    percent = count / totalcount * 100
+    if percent > GC:
+        GC = percent
+        ID = record.id
 
-myDNAstring = ""
-def gc_count(s):
-    num_gc = 0
-    for char in s:
-        if char in "gcGC":
-            num_gc = num_gc + 1
-    return num_gc
-
-
-print(gc_count(myDNAstring))
+print(ID)
+print(GC)
+records.close()
 
