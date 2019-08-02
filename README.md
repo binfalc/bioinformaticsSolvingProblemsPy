@@ -12,3 +12,16 @@ An example of a length 21 DNA string (whose alphabet contains the symbols 'A', '
 Given: A DNA string s of length at most 1000 nt.
 
 Return: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in s.
+
+2. Transcribing DNA into RNA
+
+Problem
+
+An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'.
+
+Given a DNA string t corresponding to a coding strand, its transcribed RNA string u is formed by replacing all occurrences of 'T' in t with 'U' in u.
+
+Given: A DNA string t having length at most 1000 nt.
+
+Return: The transcribed RNA string of t
+.
