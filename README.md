@@ -1,6 +1,7 @@
 # bioinformaticsSolvingProblemsPy
 Solving bioinformatics problems with Python from Rosalind platform
 
+
 1. Counting DNA Nucleotides
 
 Problem
@@ -13,6 +14,7 @@ Given: A DNA string s of length at most 1000 nt.
 
 Return: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in s.
 
+
 2. Transcribing DNA into RNA
 
 Problem
@@ -24,6 +26,7 @@ Given a DNA string t corresponding to a coding strand, its transcribed RNA strin
 Given: A DNA string t having length at most 1000 nt.
 
 Return: The transcribed RNA string of t.
+
 
 3. Complementing a Strand of DNA
 
